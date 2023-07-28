@@ -42,7 +42,7 @@ public class Lab2P2_walterdoblado {
                         String turno;
 
                         int numMichelin;
-                        int sueldoChef;
+                        double sueldoChef;
 
                         System.out.println("ingrese el nombre del chef");
                         nomChef = lea.next();
@@ -56,7 +56,7 @@ public class Lab2P2_walterdoblado {
                                 + "Michelin ");
                         numMichelin = lea.nextInt();
                         System.out.println("ingrese el sueldo del chef");
-                        sueldoChef = lea.nextInt();
+                        sueldoChef = lea.nextDouble();
 
                         if (contChef < 15) {
 
@@ -74,19 +74,8 @@ public class Lab2P2_walterdoblado {
                         String turno;
 
                         int numMichelin;
-                        int sueldoChef;
+                        double sueldoChef;
 
-//                        if (p2>=0&&p2<cosas.size()) {
-//                        if (cosas.get(p2) instanceof televisor) {
-//                            
-//                            JOptionPane.showMessageDialog(null, "Televisor modificado exitosamente");
-//                        } else {
-//                            JOptionPane.showMessageDialog(null, "TV no encontrado");
-//                        }
-//                    } else {
-//                        JOptionPane.showMessageDialog(null, "La posicion esta fuera de rango");
-//                    }
-//                    break;
                         int p2;
                         System.out.println(ch);
                         System.out.println("ingrese la posicion");
@@ -106,7 +95,7 @@ public class Lab2P2_walterdoblado {
                             numMichelin = lea.nextInt();
                             ((Chefs) ch.get(p2)).setNumMichelin(numMichelin);
                             System.out.println("ingrese el sueldo del chef");
-                            sueldoChef = lea.nextInt();
+                            sueldoChef = lea.nextDouble();
                             ((Chefs) ch.get(p2)).setSueldoChef(sueldoChef);
                         } else {
                             System.out.println("posicion fuera de rango");
@@ -141,12 +130,106 @@ public class Lab2P2_walterdoblado {
                     }
 
                 } else if (opc == 2) {
-                    System.out.println(" bienvenido a la opcion -->Chefs"
-                            + "\n\n1. crear chef"
-                            + "\n\n2. modificar chef"
-                            + "\n\n3. eliminar"
-                            + "\n\n4. listar chef"
+                    System.out.println(" bienvenido a la opcion -->Mesero"
+                            + "\n\n1. crear Mesero"
+                            + "\n\n2. modificar Mesero"
+                            + "\n\n3. eliminar Mesero"
+                            + "\n\n4. listar Mesero"
                             + "\n\n5. volver");
+                    int op = 0;
+
+                    if (op == 1) {
+                        String nomMese;
+                        int edadMese;
+                        String turno;
+
+                        double sueldoMese;
+                        double propMese;
+
+                        System.out.println("ingrese el nombre del mesero");
+                        nomMese = lea.next();
+
+                        System.out.println("ingrese la edad del mesero");
+                        edadMese = lea.nextInt();
+                        System.out.println("ingrese el turno del mesero");
+                        turno = lea.next();
+
+                        System.out.println("ingrese el sueldo del mesero");
+                        sueldoMese = lea.nextDouble();
+                        System.out.println("ingrese la propina del mesero");
+                        propMese = lea.nextDouble();
+
+                        if (contChef < 9) {
+
+                            ch.add(new Meseros(nomMese, edadMese, turno, sueldoMese, propMese));
+
+                            System.out.println("mesero agregado");
+                            contChef++;
+                        } else if (contChef > 8) {
+
+                            System.out.println("el numero de mesero paso el limite");
+                        }
+
+                    } else if (op == 2) {
+                        String nomChef;
+                        int edadChef;
+                        String turno;
+
+                        int numMichelin;
+                        double sueldoChef;
+
+                        int p2;
+                        System.out.println(ch);
+                        System.out.println("ingrese la posicion");
+                        p2 = lea.nextInt();
+                        if (p2 >= 0 && p2 < ch.size()) {
+                            System.out.println("ingrese el nombre del chef");
+                            nomChef = lea.next();
+                            ((Chefs) ch.get(p2)).setNomChef(nomChef);
+                            System.out.println("ingrese la edad del chef");
+                            edadChef = lea.nextInt();
+                            ((Chefs) ch.get(p2)).setEdadChef(edadChef);
+                            System.out.println("ingrese el turno");
+                            turno = lea.next();
+                            ((Chefs) ch.get(p2)).setTurno(turno);
+                            System.out.println("ingrese el N° de estrellas\n"
+                                    + "Michelin ");
+                            numMichelin = lea.nextInt();
+                            ((Chefs) ch.get(p2)).setNumMichelin(numMichelin);
+                            System.out.println("ingrese el sueldo del chef");
+                            sueldoChef = lea.nextDouble();
+                            ((Chefs) ch.get(p2)).setSueldoChef(sueldoChef);
+                        } else {
+                            System.out.println("posicion fuera de rango");
+                        }
+
+                    } else if (op == 3) {
+                        int p2;
+                        String selc = "";
+                        System.out.println(ch);
+                        System.out.println("ingrese la posicion a eliminar");
+                        p2 = lea.nextInt();
+                        if (p2 >= 0 && p2 < ch.size()) {
+                            System.out.println("estas seguro?");
+                            if (selc == "si") {
+                                ch.remove(p2);
+                                System.out.println("chef eliminado con exito");
+                            } else if (selc == "no") {
+                                System.out.println("volviendo");
+                            }
+
+                        } else {
+                            System.out.println("posicion fuera de rango");
+                        }
+
+                    } else if (op == 4) {
+                        System.out.println("lista de los chef:");
+                        System.out.println(ch);
+                    } else if (op == 5) {
+                        System.out.println("volviendo al inicio");
+                    } else {
+                        System.out.println("error, numero no valido");
+                    }
 
                 } else if (opc == 3) {
                     System.out.println(" bienvenido a la opcion -->Chefs"

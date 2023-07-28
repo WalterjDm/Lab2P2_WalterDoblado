@@ -15,9 +15,9 @@ public class Chefs {
     private String turno;
 
     private int numMichelin;
-    private int sueldoChef;
+    private double sueldoChef;
 
-    public Chefs(String nomChef, int edadChef, String turno, int numMichelin, int sueldoChef) {
+    public Chefs(String nomChef, int edadChef, String turno, int numMichelin, double sueldoChef) {
         this.nomChef = nomChef;
         this.edadChef = edadChef;
         this.turno = turno;
@@ -59,11 +59,11 @@ public class Chefs {
         this.numMichelin = numMichelin;
     }
 
-    public int getSueldoChef() {
+    public double getSueldoChef() {
         return sueldoChef;
     }
 
-    public void setSueldoChef(int sueldoChef) {
+    public void setSueldoChef(double sueldoChef) {
         this.sueldoChef = sueldoChef;
     }
 
