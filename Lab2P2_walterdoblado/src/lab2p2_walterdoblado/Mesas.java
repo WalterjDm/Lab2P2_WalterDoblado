@@ -1,13 +1,53 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
+
 package lab2p2_walterdoblado;
 
-/**
- *
- * @author walter
- */
+
 public class Mesas {
+    
+    private int numPlat;
+    private int numUtil;
+    private int precio;
+
+    public Mesas(int numPlat, int numUtil, int precio) {
+        this.numPlat = numPlat;
+        this.numUtil = numUtil;
+        this.precio = precio;
+    }
+
+    public int getNumPlat() {
+        return numPlat;
+    }
+
+    public void setNumPlat(int numPlat) {
+        this.numPlat = numPlat;
+    }
+
+    public int getNumUtil() {
+        return numUtil;
+    }
+
+    public void setNumUtil(int numUtil) {
+        this.numUtil = numUtil;
+    }
+
+    public int getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(int precio) {
+        this.precio = precio;
+    }
+
+    @Override
+    public String toString() {
+        return "Mesas{" + "numPlat=" + numPlat + ", numUtil=" + numUtil + ", precio=" + precio + '}';
+    }
+    
+    
+    
+    
+    
+    
+    
     
 }

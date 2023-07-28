@@ -9,12 +9,13 @@ public class Lab2P2_walterdoblado {
         ArrayList ch = new ArrayList();
         Scanner lea = new Scanner(System.in);
         int opc = 0;
-
+        int acum=0;
         String usuario;
         String contra;
         String verUsuario = "gerente";
         String verContra = "g3r$nt0";
         int contChef = 0;
+        int contMese = 0;
 
         System.out.println("ingrese el nombre de usuario");
         usuario = lea.next();
@@ -27,7 +28,7 @@ public class Lab2P2_walterdoblado {
                 menu();
                 opc = lea.nextInt();
 
-                if (opc == 1) {
+                if (opc == 1) {//////chef
                     System.out.println(" bienvenido a la opcion -->Chefs"
                             + "\n\n1. crear chef"
                             + "\n\n2. modificar chef"
@@ -35,7 +36,7 @@ public class Lab2P2_walterdoblado {
                             + "\n\n4. listar chef"
                             + "\n\n5. volver");
                     int op = 0;
-
+                    op = lea.nextInt();
                     if (op == 1) {
                         String nomChef;
                         int edadChef;
@@ -87,7 +88,7 @@ public class Lab2P2_walterdoblado {
                             System.out.println("ingrese la edad del chef");
                             edadChef = lea.nextInt();
                             ((Chefs) ch.get(p2)).setEdadChef(edadChef);
-                            System.out.println("ingrese el turno");
+                            System.out.println("ingrese el turno del chef");
                             turno = lea.next();
                             ((Chefs) ch.get(p2)).setTurno(turno);
                             System.out.println("ingrese el N° de estrellas\n"
@@ -129,7 +130,7 @@ public class Lab2P2_walterdoblado {
                         System.out.println("error, numero no valido");
                     }
 
-                } else if (opc == 2) {
+                } else if (opc == 2) {////meseros
                     System.out.println(" bienvenido a la opcion -->Mesero"
                             + "\n\n1. crear Mesero"
                             + "\n\n2. modificar Mesero"
@@ -137,7 +138,7 @@ public class Lab2P2_walterdoblado {
                             + "\n\n4. listar Mesero"
                             + "\n\n5. volver");
                     int op = 0;
-
+                    op = lea.nextInt();
                     if (op == 1) {
                         String nomMese;
                         int edadMese;
@@ -159,46 +160,47 @@ public class Lab2P2_walterdoblado {
                         System.out.println("ingrese la propina del mesero");
                         propMese = lea.nextDouble();
 
-                        if (contChef < 9) {
+                        if (contMese < 9) {
 
                             ch.add(new Meseros(nomMese, edadMese, turno, sueldoMese, propMese));
 
                             System.out.println("mesero agregado");
                             contChef++;
-                        } else if (contChef > 8) {
+                        } else if (contMese > 8) {
 
                             System.out.println("el numero de mesero paso el limite");
                         }
 
                     } else if (op == 2) {
-                        String nomChef;
-                        int edadChef;
+                        String nomMese;
+                        int edadMese;
                         String turno;
 
-                        int numMichelin;
-                        double sueldoChef;
+                        double sueldoMese;
+                        double propMese;
 
                         int p2;
                         System.out.println(ch);
                         System.out.println("ingrese la posicion");
                         p2 = lea.nextInt();
                         if (p2 >= 0 && p2 < ch.size()) {
-                            System.out.println("ingrese el nombre del chef");
-                            nomChef = lea.next();
-                            ((Chefs) ch.get(p2)).setNomChef(nomChef);
-                            System.out.println("ingrese la edad del chef");
-                            edadChef = lea.nextInt();
-                            ((Chefs) ch.get(p2)).setEdadChef(edadChef);
-                            System.out.println("ingrese el turno");
+                            System.out.println("ingrese el nombre del mesero");
+                            nomMese = lea.next();
+                            ((Meseros) ch.get(p2)).setNomMese(nomMese);
+                            System.out.println("ingrese la edad del mesero");
+                            edadMese = lea.nextInt();
+                            ((Meseros) ch.get(p2)).setEdadMes(edadMese);
+                            System.out.println("ingrese el turno del mesero");
                             turno = lea.next();
-                            ((Chefs) ch.get(p2)).setTurno(turno);
-                            System.out.println("ingrese el N° de estrellas\n"
-                                    + "Michelin ");
-                            numMichelin = lea.nextInt();
-                            ((Chefs) ch.get(p2)).setNumMichelin(numMichelin);
-                            System.out.println("ingrese el sueldo del chef");
-                            sueldoChef = lea.nextDouble();
-                            ((Chefs) ch.get(p2)).setSueldoChef(sueldoChef);
+                            ((Meseros) ch.get(p2)).setTurno(turno);
+
+                            System.out.println("ingrese el sueldo del mesero");
+                            sueldoMese = lea.nextDouble();
+                            ((Meseros) ch.get(p2)).setSueldomese(sueldoMese);
+                            System.out.println("ingrese la propina del mesero");
+                            propMese = lea.nextDouble();
+                            ((Meseros) ch.get(p2)).setPropmese(propMese);
+
                         } else {
                             System.out.println("posicion fuera de rango");
                         }
@@ -213,7 +215,7 @@ public class Lab2P2_walterdoblado {
                             System.out.println("estas seguro?");
                             if (selc == "si") {
                                 ch.remove(p2);
-                                System.out.println("chef eliminado con exito");
+                                System.out.println("Mesero eliminado con exito");
                             } else if (selc == "no") {
                                 System.out.println("volviendo");
                             }
@@ -223,7 +225,7 @@ public class Lab2P2_walterdoblado {
                         }
 
                     } else if (op == 4) {
-                        System.out.println("lista de los chef:");
+                        System.out.println("lista de los meseros:");
                         System.out.println(ch);
                     } else if (op == 5) {
                         System.out.println("volviendo al inicio");
@@ -231,21 +233,207 @@ public class Lab2P2_walterdoblado {
                         System.out.println("error, numero no valido");
                     }
 
-                } else if (opc == 3) {
-                    System.out.println(" bienvenido a la opcion -->Chefs"
-                            + "\n\n1. crear chef"
-                            + "\n\n2. modificar chef"
-                            + "\n\n3. eliminar"
-                            + "\n\n4. listar chef"
+                } else if (opc == 3) { ////barttenders
+                    System.out.println(" bienvenido a la opcion -->Bartender"
+                            + "\n\n1. crear Bartender"
+                            + "\n\n2. modificar Bartender"
+                            + "\n\n3. eliminar  Bartender"
+                            + "\n\n4. listar Bartender"
                             + "\n\n5. volver");
+                    int op = 0;
+                    op = lea.nextInt();
+                    if (op == 1) {
+                        String nomBart;
+                        int edadBart;
+                        String turno;
 
-                } else if (opc == 4) {
-                    System.out.println(" bienvenido a la opcion -->Chefs"
-                            + "\n\n1. crear chef"
-                            + "\n\n2. modificar chef"
-                            + "\n\n3. eliminar"
-                            + "\n\n4. listar chef"
+                        double sueldoBart;
+                        int numLic;
+
+                        System.out.println("ingrese el nombre del Bartender");
+                        nomBart = lea.next();
+
+                        System.out.println("ingrese la edad del Bartender");
+                        edadBart = lea.nextInt();
+                        System.out.println("ingrese el turno del Bartender");
+                        turno = lea.next();
+
+                        System.out.println("ingrese el sueldo del Bartender");
+                        sueldoBart = lea.nextDouble();
+                        System.out.println("ingrese numero de licores disponible");
+                        numLic = lea.nextInt();
+
+                        if (contMese < 5) {
+
+                            ch.add(new Bartenders(nomBart, edadBart, turno, sueldoBart, numLic));
+
+                            System.out.println("Bartender agregado");
+                            contChef++;
+                        } else if (contMese > 4) {
+
+                            System.out.println("el numero de Bartender paso el limite");
+                        }
+
+                    } else if (op == 2) {
+                        String nomBart;
+                        int edadBart;
+                        String turno;
+
+                        double sueldoBart;
+                        int numLic;
+
+                        int p2;
+                        System.out.println(ch);
+                        System.out.println("ingrese la posicion");
+                        p2 = lea.nextInt();
+                        if (p2 >= 0 && p2 < ch.size()) {
+                            System.out.println("ingrese el nombre del Bartender");
+                            nomBart = lea.next();
+                            ((Meseros) ch.get(p2)).setNomMese(nomBart);
+                            System.out.println("ingrese la edad del Bartender");
+                            edadBart = lea.nextInt();
+                            ((Meseros) ch.get(p2)).setEdadMes(edadBart);
+                            System.out.println("ingrese el turno del Bartender");
+                            turno = lea.next();
+                            ((Meseros) ch.get(p2)).setTurno(turno);
+
+                            System.out.println("ingrese el sueldo del Bartender");
+                            sueldoBart = lea.nextDouble();
+                            ((Meseros) ch.get(p2)).setSueldomese(sueldoBart);
+                            System.out.println("ingrese el numero de licores disponible");
+                            numLic = lea.nextInt();
+                            ((Meseros) ch.get(p2)).setPropmese(numLic);
+
+                        } else {
+                            System.out.println("posicion fuera de rango");
+                        }
+
+                    } else if (op == 3) {
+                        int p2;
+                        String selc = "";
+                        System.out.println(ch);
+                        System.out.println("ingrese la posicion a eliminar");
+                        p2 = lea.nextInt();
+                        if (p2 >= 0 && p2 < ch.size()) {
+                            System.out.println("estas seguro?");
+                            if (selc == "si") {
+                                ch.remove(p2);
+                                System.out.println("Bartender eliminado con exito");
+                            } else if (selc == "no") {
+                                System.out.println("volviendo");
+                            }
+
+                        } else {
+                            System.out.println("posicion fuera de rango");
+                        }
+
+                    } else if (op == 4) {
+                        System.out.println("lista de los Bartenders:");
+                        System.out.println(ch);
+                    } else if (op == 5) {
+                        System.out.println("volviendo al inicio");
+                    } else {
+                        System.out.println("error, numero no valido");
+                    }
+
+                } else if (opc == 4) { /// mesas
+                    System.out.println(" bienvenido a la opcion -->Mesas"
+                            + "\n\n1. crear mesa"
+                            + "\n\n2. modificar mesa"
+                            + "\n\n3. eliminar mesa"
+                            + "\n\n4. listar mesa"
                             + "\n\n5. volver");
+                    int op = 0;
+                    op = lea.nextInt();
+                    if (op == 1) {
+                         int numPlat;
+    int numUtil;
+     int precio;
+
+                        System.out.println("ingrese el numero de platos de la mesa");
+                       numPlat = lea.nextInt();
+
+                        System.out.println("ingrese el numero de utensilios de la mesa");
+                        numUtil = lea.nextInt();
+                        System.out.println("ingrese el precio de la mesa");
+                        precio = lea.nextInt();
+
+                      
+                        ;
+
+                        if (contMese < 5) {
+
+                            ch.add(new Mesas(numPlat, numUtil, precio));
+
+                                
+                            System.out.println("Bartender agregado");
+                            contChef++;
+                        } else if (contMese > 4) {
+
+                            System.out.println("el numero de Bartender paso el limite");
+                        }
+
+                    } else if (op == 2) {
+                        String nomBart;
+                        int edadBart;
+                        String turno;
+
+                        double sueldoBart;
+                        int numLic;
+
+                        int p2;
+                        System.out.println(ch);
+                        System.out.println("ingrese la posicion");
+                        p2 = lea.nextInt();
+                        if (p2 >= 0 && p2 < ch.size()) {
+                            System.out.println("ingrese el nombre del Bartender");
+                            nomBart = lea.next();
+                            ((Meseros) ch.get(p2)).setNomMese(nomBart);
+                            System.out.println("ingrese la edad del Bartender");
+                            edadBart = lea.nextInt();
+                            ((Meseros) ch.get(p2)).setEdadMes(edadBart);
+                            System.out.println("ingrese el turno del Bartender");
+                            turno = lea.next();
+                            ((Meseros) ch.get(p2)).setTurno(turno);
+
+                            System.out.println("ingrese el sueldo del Bartender");
+                            sueldoBart = lea.nextDouble();
+                            ((Meseros) ch.get(p2)).setSueldomese(sueldoBart);
+                            System.out.println("ingrese el numero de licores disponible");
+                            numLic = lea.nextInt();
+                            ((Meseros) ch.get(p2)).setPropmese(numLic);
+
+                        } else {
+                            System.out.println("posicion fuera de rango");
+                        }
+
+                    } else if (op == 3) {
+                        int p2;
+                        String selc = "";
+                        System.out.println(ch);
+                        System.out.println("ingrese la posicion a eliminar");
+                        p2 = lea.nextInt();
+                        if (p2 >= 0 && p2 < ch.size()) {
+                            System.out.println("estas seguro?");
+                            if (selc == "si") {
+                                ch.remove(p2);
+                                System.out.println("Bartender eliminado con exito");
+                            } else if (selc == "no") {
+                                System.out.println("volviendo");
+                            }
+
+                        } else {
+                            System.out.println("posicion fuera de rango");
+                        }
+
+                    } else if (op == 4) {
+                        System.out.println("lista de los Bartenders:");
+                        System.out.println(ch);
+                    } else if (op == 5) {
+                        System.out.println("volviendo al inicio");
+                    } else {
+                        System.out.println("error, numero no valido");
+                    }
 
                 } else if (opc == 5) {
 
