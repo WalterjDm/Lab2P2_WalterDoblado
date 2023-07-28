@@ -17,8 +17,7 @@ public class Lab2P2_walterdoblado {
         String contra;
         int mat = 0;
         int ves = 0;
-        
-        
+
         String verUsuario = "gerente";
         String verContra = "g3r$nt0";
         int contChef = 0;
@@ -33,6 +32,7 @@ public class Lab2P2_walterdoblado {
 
             while (opc != 5) {
                 menu();
+                System.out.print("ingrese la opcion: ");
                 opc = lea.nextInt();
 
                 if (opc == 1) {//////chef
@@ -353,8 +353,8 @@ public class Lab2P2_walterdoblado {
                 } else if (opc == 4) { /// mesas
                     int op = 0;
                     int numPlat1;
-                            int numUtil1;
-                            int precio1 = 0;
+                    int numUtil1;
+                    int precio1 = 0;
                     while (op != 5) {
                         System.out.println(" bienvenido a la opcion -->Mesas"
                                 + "\n\n1. crear mesa"
@@ -365,7 +365,6 @@ public class Lab2P2_walterdoblado {
 
                         op = lea.nextInt();
                         if (op == 1) {
-                            
 
                             System.out.println("ingrese el numero de platos de la mesa");
                             numPlat1 = lea.nextInt();
@@ -374,7 +373,7 @@ public class Lab2P2_walterdoblado {
                             numUtil1 = lea.nextInt();
                             System.out.println("ingrese el precio de la mesa");
                             precio1 = lea.nextInt();
-                            acum+=precio1;
+                            acum += precio1;
 
                             if (contMese < 11) {
 
@@ -407,7 +406,7 @@ public class Lab2P2_walterdoblado {
                                 acum = acum - precio1;
                                 System.out.println("ingrese el precio de la mesa");
                                 precio = lea.nextInt();
-                                acum+=precio;
+                                acum += precio;
                                 ((Mesas) ch3.get(p2)).setPrecio(precio);
 
                             } else {
@@ -459,8 +458,7 @@ public class Lab2P2_walterdoblado {
 
     static void menu() {
 
-        System.out.println("Bienvenido a registro del restaurante\n"
-                + " ingrese la opcion que desea\n\n"
+        System.out.println("Bienvenido a registro del restaurante\n\n"
                 + "1. Registro de Chefs\n\n"
                 + "2. Registro Meseros\n\n"
                 + "3. Registro Bartenders\n\n"

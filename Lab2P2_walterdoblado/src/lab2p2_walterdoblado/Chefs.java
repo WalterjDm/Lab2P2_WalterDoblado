@@ -61,15 +61,18 @@ public class Chefs {
     public void setSueldoChef(double sueldoChef) {
         this.sueldoChef = sueldoChef;
     }
+    
+    
 
     @Override
     public String toString() {
-        return "Chefs" + ""
+        return "-Chefs" + ""
                 + "\n nombre del chef es: " + nomChef + ""
                 + "\n edad del chef es: " + edadChef + ""
                 + "\n su turno es: " + turno + ""
                 + "\n su numero de estrellas es: " + numMichelin + ""
-                + "\n sueldoChef=" + sueldoChef ;
+                + "\n sueldo del chef: " + sueldoChef 
+                + "\n\n ";
     }
 
 }

@@ -59,12 +59,13 @@ public class Meseros {
 
     @Override
     public String toString() {
-        return "Meserosson :" + ""
-                + "\nomMese=" + nomMese + ""
-                + "\n edadMes=" + edadMes + ""
-                + "\n turno=" + turno + ""
-                + "\n sueldomese=" + sueldomese + ""
-                + "\n propmese=" + propmese ;
+        return "los Meseros son: " + ""
+                + "\n nombre del mesero es: " + nomMese + ""
+                + "\n su edad es" + edadMes + ""
+                + "\n su turno es: " + turno + ""
+                + "\n su sueldo es: " + sueldomese + ""
+                + "\n la propina es: " + propmese 
+                + "\n\n ";
     }
 
 }

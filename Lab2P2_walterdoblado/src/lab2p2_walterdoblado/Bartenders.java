@@ -59,11 +59,13 @@ public class Bartenders {
 
     @Override
     public String toString() {
-        return "Bartenders son : " + "nombre: " + nomBart + ""
+        return "-Bartenders son : " + ""
+                + "\n nombre: " + nomBart + ""
                 + "\n su edad es: " + edadBart + ""
                 + "\n su turno es: " + turno + ""
                 + "\n su sueldo es: " + sueldoBart + ""
-                + "\n y la cantidad de licor disponible es: " + numLic;
+                + "\n y la cantidad de licor disponible es: " + numLic
+                + "\n\n ";
     }
 
 }
