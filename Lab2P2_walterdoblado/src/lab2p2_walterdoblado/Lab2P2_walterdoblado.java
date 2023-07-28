@@ -62,6 +62,32 @@ public class Lab2P2_walterdoblado {
 
                             System.out.println("ingrese el turno");
                             turno = lea.next();
+//                            if (turno.equals("matutino")) {
+//                                
+//                                if (mat<=7) {
+//                                    mat++;
+//                                    
+//                                }else {
+//                                    System.out.println("ya se lleno en el turno matutino");
+//                                    break;
+//                                }
+//                                
+//                                
+//                                
+//                            }else if(turno.equals("vespertino")){
+//                                 if (ves<=7) {
+//                                    ves++;
+//                                    
+//                                }else{
+//                                    System.out.println("ya se lleno en el turno matutino");
+//                                    break;
+//                                }
+//                                
+//                                
+//                            }else{
+//                                System.out.println("opcion no valida");
+//                                break;
+//                            }
 
                             System.out.println("ingrese el N° de estrellas\n"
                                     + "Michelin ");
@@ -100,6 +126,35 @@ public class Lab2P2_walterdoblado {
                                 ((Chefs) ch.get(p2)).setEdadChef(edadChef);
                                 System.out.println("ingrese el turno del chef");
                                 turno = lea.next();
+//                                if () {
+//                                    
+//                                }
+//                                   if (turno.equals("matutino")) {
+//                                
+//                                if (mat<=7) {
+//                                    mat++;
+//                                    
+//                                }else {
+//                                    System.out.println("ya se lleno en el turno matutino");
+//                                    break;
+//                                }
+//                                
+//                                
+//                                
+//                            }else if(turno.equals("vespertino")){
+//                                 if (ves<=7) {
+//                                    ves++;
+//                                    
+//                                }else{
+//                                    System.out.println("ya se lleno en el turno matutino");
+//                                    break;
+//                                }
+//                                
+//                                
+//                            }else{
+//                                System.out.println("opcion no valida");
+//                                break;
+//                            }
                                 ((Chefs) ch.get(p2)).setTurno(turno);
                                 System.out.println("ingrese el N° de estrellas\n"
                                         + "Michelin ");
@@ -445,6 +500,7 @@ public class Lab2P2_walterdoblado {
                 } else if (opc == 5) {
                     System.out.println("salio del codigo ");
                 } else {
+                    System.out.println("opcion no valida");
 
                 }
 
@@ -452,6 +508,7 @@ public class Lab2P2_walterdoblado {
         } else {
 
             System.out.println("el nombre del usuario o contraseña es incorrecta");
+
         }
 
     }
@@ -463,7 +520,7 @@ public class Lab2P2_walterdoblado {
                 + "2. Registro Meseros\n\n"
                 + "3. Registro Bartenders\n\n"
                 + "4. Registro Mesas\n\n"
-                + "5. salir del programa");
+                + "5. salir del programa\n");
 
     }
 
