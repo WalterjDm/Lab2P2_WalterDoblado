@@ -51,7 +51,7 @@ public class Lab2P2_walterdoblado {
                         edadChef = lea.nextInt();
                         System.out.println("ingrese el turno");
                         turno = lea.next();
-                        
+
                         System.out.println("ingrese el N° de estrellas\n"
                                 + "Michelin ");
                         numMichelin = lea.nextInt();
@@ -108,7 +108,7 @@ public class Lab2P2_walterdoblado {
                             System.out.println("ingrese el sueldo del chef");
                             sueldoChef = lea.nextInt();
                             ((Chefs) ch.get(p2)).setSueldoChef(sueldoChef);
-                        }else{
+                        } else {
                             System.out.println("posicion fuera de rango");
                         }
 
@@ -120,51 +120,49 @@ public class Lab2P2_walterdoblado {
                         p2 = lea.nextInt();
                         if (p2 >= 0 && p2 < ch.size()) {
                             System.out.println("estas seguro?");
-                        if (selc == "si") {
-                             ch.remove(p2);
-                             System.out.println("chef eliminado con exito");
-                        }else if(selc== "no"){
-                            System.out.println("volviendo");
-                        }
-                            
-                        
-                        }else{
+                            if (selc == "si") {
+                                ch.remove(p2);
+                                System.out.println("chef eliminado con exito");
+                            } else if (selc == "no") {
+                                System.out.println("volviendo");
+                            }
+
+                        } else {
                             System.out.println("posicion fuera de rango");
                         }
-                        
 
                     } else if (op == 4) {
                         System.out.println("lista de los chef:");
                         System.out.println(ch);
                     } else if (op == 5) {
-
+                        System.out.println("volviendo al inicio");
                     } else {
-
+                        System.out.println("error, numero no valido");
                     }
 
                 } else if (opc == 2) {
                     System.out.println(" bienvenido a la opcion -->Chefs"
-                            + "\n1. crear chef"
-                            + "\n2. modificar chef"
-                            + "\n3. eliminar"
-                            + "\n4. listar chef"
-                            + "\n5. volver");
+                            + "\n\n1. crear chef"
+                            + "\n\n2. modificar chef"
+                            + "\n\n3. eliminar"
+                            + "\n\n4. listar chef"
+                            + "\n\n5. volver");
 
                 } else if (opc == 3) {
                     System.out.println(" bienvenido a la opcion -->Chefs"
-                            + "\n1. crear chef"
-                            + "\n2. modificar chef"
-                            + "\n3. eliminar"
-                            + "\n4. listar chef"
-                            + "\n5. volver");
+                            + "\n\n1. crear chef"
+                            + "\n\n2. modificar chef"
+                            + "\n\n3. eliminar"
+                            + "\n\n4. listar chef"
+                            + "\n\n5. volver");
 
                 } else if (opc == 4) {
                     System.out.println(" bienvenido a la opcion -->Chefs"
-                            + "\n1. crear chef"
-                            + "\n2. modificar chef"
-                            + "\n3. eliminar"
-                            + "\n4. listar chef"
-                            + "\n5. volver");
+                            + "\n\n1. crear chef"
+                            + "\n\n2. modificar chef"
+                            + "\n\n3. eliminar"
+                            + "\n\n4. listar chef"
+                            + "\n\n5. volver");
 
                 } else if (opc == 5) {
 
