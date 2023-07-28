@@ -17,6 +17,8 @@ public class Lab2P2_walterdoblado {
         String contra;
         int mat = 0;
         int ves = 0;
+        
+        
         String verUsuario = "gerente";
         String verContra = "g3r$nt0";
         int contChef = 0;
@@ -350,6 +352,9 @@ public class Lab2P2_walterdoblado {
                     }
                 } else if (opc == 4) { /// mesas
                     int op = 0;
+                    int numPlat1;
+                            int numUtil1;
+                            int precio1 = 0;
                     while (op != 5) {
                         System.out.println(" bienvenido a la opcion -->Mesas"
                                 + "\n\n1. crear mesa"
@@ -360,21 +365,20 @@ public class Lab2P2_walterdoblado {
 
                         op = lea.nextInt();
                         if (op == 1) {
-                            int numPlat;
-                            int numUtil;
-                            int precio;
+                            
 
                             System.out.println("ingrese el numero de platos de la mesa");
-                            numPlat = lea.nextInt();
+                            numPlat1 = lea.nextInt();
 
                             System.out.println("ingrese el numero de utensilios de la mesa");
-                            numUtil = lea.nextInt();
+                            numUtil1 = lea.nextInt();
                             System.out.println("ingrese el precio de la mesa");
-                            precio = lea.nextInt();
+                            precio1 = lea.nextInt();
+                            acum+=precio1;
 
                             if (contMese < 11) {
 
-                                ch3.add(new Mesas(numPlat, numUtil, precio));
+                                ch3.add(new Mesas(numPlat1, numUtil1, precio1));
 
                                 System.out.println("Bartender agregado");
                                 contChef++;
@@ -400,8 +404,10 @@ public class Lab2P2_walterdoblado {
                                 System.out.println("ingrese el numero de utensilios de la mesa");
                                 numUtil = lea.nextInt();
                                 ((Mesas) ch3.get(p2)).setNumUtil(numUtil);
+                                acum = acum - precio1;
                                 System.out.println("ingrese el precio de la mesa");
                                 precio = lea.nextInt();
+                                acum+=precio;
                                 ((Mesas) ch3.get(p2)).setPrecio(precio);
 
                             } else {
@@ -428,8 +434,9 @@ public class Lab2P2_walterdoblado {
                             }
 
                         } else if (op == 4) {
-                            System.out.println("lista de los Bartenders:");
+                            System.out.println("lista de las mesas");
                             System.out.println(ch3);
+                            System.out.println("total:" + acum);
                         } else if (op == 5) {
                             System.out.println("volviendo al inicio");
                         } else {
