@@ -29,11 +29,11 @@ public class Lab2P2_walterdoblado {
 
                 if (opc == 1) {
                     System.out.println(" bienvenido a la opcion -->Chefs"
-                            + "\n1. crear chef"
-                            + "\n2. modificar chef"
-                            + "\n3. eliminar"
-                            + "\n4. listar chef"
-                            + "\n5. volver");
+                            + "\n\n1. crear chef"
+                            + "\n\n2. modificar chef"
+                            + "\n\n3. eliminar"
+                            + "\n\n4. listar chef"
+                            + "\n\n5. volver");
                     int op = 0;
 
                     if (op == 1) {
@@ -51,7 +51,7 @@ public class Lab2P2_walterdoblado {
                         edadChef = lea.nextInt();
                         System.out.println("ingrese el turno");
                         turno = lea.next();
-
+                        
                         System.out.println("ingrese el N° de estrellas\n"
                                 + "Michelin ");
                         numMichelin = lea.nextInt();
@@ -108,12 +108,34 @@ public class Lab2P2_walterdoblado {
                             System.out.println("ingrese el sueldo del chef");
                             sueldoChef = lea.nextInt();
                             ((Chefs) ch.get(p2)).setSueldoChef(sueldoChef);
+                        }else{
+                            System.out.println("posicion fuera de rango");
                         }
 
                     } else if (op == 3) {
+                        int p2;
+                        String selc = "";
+                        System.out.println(ch);
+                        System.out.println("ingrese la posicion a eliminar");
+                        p2 = lea.nextInt();
+                        if (p2 >= 0 && p2 < ch.size()) {
+                            System.out.println("estas seguro?");
+                        if (selc == "si") {
+                             ch.remove(p2);
+                             System.out.println("chef eliminado con exito");
+                        }else if(selc== "no"){
+                            System.out.println("volviendo");
+                        }
+                            
+                        
+                        }else{
+                            System.out.println("posicion fuera de rango");
+                        }
+                        
 
                     } else if (op == 4) {
-
+                        System.out.println("lista de los chef:");
+                        System.out.println(ch);
                     } else if (op == 5) {
 
                     } else {
@@ -161,11 +183,11 @@ public class Lab2P2_walterdoblado {
     static void menu() {
 
         System.out.println("Bienvenido a registro del restaurante\n"
-                + " ingrese la opcion que desea\n"
-                + "1. Registro de Chefs\n"
-                + "2. Registro Meseros\n"
-                + "3. Registro Bartenders\n"
-                + "4. Registro Mesas\n"
+                + " ingrese la opcion que desea\n\n"
+                + "1. Registro de Chefs\n\n"
+                + "2. Registro Meseros\n\n"
+                + "3. Registro Bartenders\n\n"
+                + "4. Registro Mesas\n\n"
                 + "5. salir del programa");
 
     }

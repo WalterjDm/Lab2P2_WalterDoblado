@@ -67,4 +67,14 @@ public class Chefs {
         this.sueldoChef = sueldoChef;
     }
 
+    @Override
+    public String toString() {
+        return "Chefs{" + "nombre del chef es: " + nomChef + ""
+                + "\n edad del chef es: " + edadChef + ""
+                + "\n su turno es: " + turno + ""
+                + "\n su numero de estrellas es: " + numMichelin + ","
+                + "\nsueldoChef=" + sueldoChef + '}';
+    }
+    
+
 }
