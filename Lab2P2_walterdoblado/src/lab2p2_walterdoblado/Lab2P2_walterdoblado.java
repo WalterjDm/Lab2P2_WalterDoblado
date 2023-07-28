@@ -18,27 +18,25 @@ public class Lab2P2_walterdoblado {
         System.out.println("ingrese la contraseña");
         contra = lea.next();
 
-        
-            if (contra.equals(verContra) && usuario.equals(verUsuario)) {
-            
-        
-        while (opc != 2) {
-            menu();
-            opc = lea.nextInt();
+        if (contra.equals(verContra) && usuario.equals(verUsuario)) {
 
-            if (opc == 1) {
+            while (opc != 2) {
+                menu();
+                opc = lea.nextInt();
 
-            } else if (opc == 2) {
+                if (opc == 1) {
 
-            } else {
+                } else if (opc == 2) {
+
+                } else {
+
+                }
 
             }
+        } else {
 
+            System.out.println("el nombre del usuario o contraseña es incorrecta");
         }
-            }else{
-                
-                System.out.println("el nombre del usuario o contraseña es incorrecta");
-            }
 
     }
 
