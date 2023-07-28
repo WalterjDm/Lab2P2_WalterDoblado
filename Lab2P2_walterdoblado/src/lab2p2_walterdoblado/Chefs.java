@@ -1,6 +1,4 @@
-
 package lab2p2_walterdoblado;
-
 
 public class Chefs {
 
@@ -10,6 +8,8 @@ public class Chefs {
 
     private int numMichelin;
     private double sueldoChef;
+    int mat = 0;
+    int ves = 0;
 
     public Chefs(String nomChef, int edadChef, String turno, int numMichelin, double sueldoChef) {
         this.nomChef = nomChef;
@@ -41,9 +41,10 @@ public class Chefs {
     }
 
     public void setTurno(String turno) {
+
         this.turno = turno;
+
     }
-    
 
     public int getNumMichelin() {
         return numMichelin;
@@ -63,12 +64,12 @@ public class Chefs {
 
     @Override
     public String toString() {
-        return "Chefs{" + "nombre del chef es: " + nomChef + ""
+        return "Chefs" + ""
+                + "\nombre del chef es: " + nomChef + ""
                 + "\n edad del chef es: " + edadChef + ""
                 + "\n su turno es: " + turno + ""
-                + "\n su numero de estrellas es: " + numMichelin + ","
-                + "\nsueldoChef=" + sueldoChef + '}';
+                + "\n su numero de estrellas es: " + numMichelin + ""
+                + "\n sueldoChef=" + sueldoChef ;
     }
-    
 
 }

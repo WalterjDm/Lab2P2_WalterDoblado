@@ -40,7 +40,9 @@ public class Mesas {
 
     @Override
     public String toString() {
-        return "Mesas{" + "numPlat=" + numPlat + ", numUtil=" + numUtil + ", precio=" + precio + '}';
+        return "en la mesa hay: " + "platos: " + numPlat + ""
+                + "\n " + numUtil + "utensilios"
+                + "\n y el precio " + precio ;
     }
     
     

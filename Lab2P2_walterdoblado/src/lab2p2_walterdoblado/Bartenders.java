@@ -1,14 +1,11 @@
-
 package lab2p2_walterdoblado;
 
-
 public class Bartenders {
-    
+
     private String nomBart;
     private int edadBart;
     private String turno;
 
-    
     private double sueldoBart;
     private int numLic;
 
@@ -62,15 +59,11 @@ public class Bartenders {
 
     @Override
     public String toString() {
-        return "Bartenders{" + "nomBart=" + nomBart + ", edadBart=" + edadBart + ", turno=" + turno + ", sueldoBart=" + sueldoBart + ", numLic=" + numLic + '}';
+        return "Bartenders son : " + "nombre: " + nomBart + ""
+                + "\n su edad es: " + edadBart + ""
+                + "\n su turno es: " + turno + ""
+                + "\n su sueldo es: " + sueldoBart + ""
+                + "\n y la cantidad de licor disponible es: " + numLic;
     }
-    
-    
-    
-    
-    
-    
-    
-    
-    
+
 }

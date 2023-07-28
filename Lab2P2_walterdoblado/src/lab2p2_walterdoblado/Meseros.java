@@ -1,14 +1,11 @@
-
 package lab2p2_walterdoblado;
 
-
 public class Meseros {
-    
-      private String nomMese;
+
+    private String nomMese;
     private int edadMes;
     private String turno;
 
-    
     private double sueldomese;
     private double propmese;
 
@@ -62,11 +59,12 @@ public class Meseros {
 
     @Override
     public String toString() {
-        return "Meseros{" + "nomMese=" + nomMese + ", edadMes=" + edadMes + ", turno=" + turno + ", sueldomese=" + sueldomese + ", propmese=" + propmese + '}';
+        return "Meserosson :" + ""
+                + "\nomMese=" + nomMese + ""
+                + "\n edadMes=" + edadMes + ""
+                + "\n turno=" + turno + ""
+                + "\n sueldomese=" + sueldomese + ""
+                + "\n propmese=" + propmese ;
     }
-    
-    
-    
-    
-    
+
 }
